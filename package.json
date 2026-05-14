@@ -1,0 +1,26 @@
+{
+  "name": "cine-api",
+  "version": "1.0.0",
+  "description": "API REST para gestión de películas y actores - Examen Final Programación Web Services",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "express",
+    "mongodb",
+    "api-rest",
+    "cine",
+    "render"
+  ],
+  "author": "Rodrigo Gómez Moyano",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongodb": "^7.2.0"
+  }
+}

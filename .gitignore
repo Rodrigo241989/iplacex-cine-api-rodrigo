@@ -1,0 +1,36 @@
+# ============================================================
+# .gitignore - Archivos y carpetas excluidos del repositorio
+# ============================================================
+
+# --- Dependencias de Node.js ---
+# La carpeta node_modules contiene TODAS las dependencias instaladas.
+# No se sube al repositorio porque se regenera con "npm install".
+node_modules/
+
+# --- Variables de entorno ---
+# El archivo .env contiene credenciales sensibles (URI de MongoDB, etc.)
+# NUNCA debe subirse al repositorio por seguridad.
+.env
+
+# --- Logs ---
+# Archivos de registro generados por npm o la aplicación
+*.log
+npm-debug.log*
+
+# --- Sistema operativo ---
+# Archivos generados por macOS
+.DS_Store
+# Archivos generados por Windows
+Thumbs.db
+desktop.ini
+
+# --- Editor de código ---
+# Configuración local de VS Code (puede variar entre desarrolladores)
+.vscode/
+
+# --- Otros ---
+# Archivos de cobertura de tests
+coverage/
+# Directorio de compilación (si se usa algún bundler)
+dist/
+build/
