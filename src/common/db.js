@@ -44,7 +44,7 @@
 //    - Haz clic en "Confirm"
 //
 // 5. OBTENER LA CADENA DE CONEXIÓN:
-//    - Ve a "Database" → haz clic en "Connect" en tu clúster
+//    - Ve a "Database" �?haz clic en "Connect" en tu clúster
 //    - Selecciona "Drivers"
 //    - Driver: Node.js, Versión: 6.0 or later
 //    - Copia la cadena de conexión (connection string)
@@ -52,7 +52,7 @@
 //
 // 6. CONFIGURAR LA VARIABLE DE ENTORNO:
 //    - En LOCAL: Crea un archivo .env con MONGODB_URI=tu_cadena_de_conexión
-//    - En RENDER: Configura la variable en Environment → Environment Variables
+//    - En RENDER: Configura la variable en Environment �?Environment Variables
 //
 // 7. La base de datos "cine_db" se creará automáticamente
 //    cuando insertes el primer documento.
@@ -70,17 +70,17 @@ import { MongoClient } from "mongodb";
 //   - O exportar la variable en la terminal: export MONGODB_URI="tu_uri"
 //
 // Para producción (Render):
-//   - Configurar la variable en el panel de Render → Environment Variables
-const MONGODB_URI = process.env.MONGODB_URI;
+//   - Configurar la variable en el panel de Render �?Environment Variables
+const uri = process.env.MONGODB_URI || "mongodb+srv://eva3_express:ubXMgx6hCoXdvoFb@cluster-express.egphtbu.mongodb.net/cine_db?appName=cluster-express";
 
 // Validación: si no se encuentra la variable de entorno, mostramos error claro
 if (!MONGODB_URI) {
-  console.error("❌ ERROR: La variable de entorno MONGODB_URI no está definida.");
+  console.error("�?ERROR: La variable de entorno MONGODB_URI no está definida.");
   console.error("   💡 Para desarrollo local:");
   console.error("      - Crea un archivo .env con: MONGODB_URI=tu_cadena_de_conexion");
   console.error("      - O ejecuta: export MONGODB_URI=\"tu_cadena_de_conexion\"");
   console.error("   💡 Para Render:");
-  console.error("      - Ve a tu servicio → Environment → Environment Variables");
+  console.error("      - Ve a tu servicio �?Environment �?Environment Variables");
   console.error("      - Agrega MONGODB_URI con tu cadena de conexión de Atlas");
   process.exit(1);
 }
@@ -125,11 +125,11 @@ async function connectDB() {
     // Verificamos que la conexión funciona haciendo un "ping" al servidor
     await db.command({ ping: 1 });
 
-    console.log(`✅ Conectado exitosamente a MongoDB Atlas`);
+    console.log(`�?Conectado exitosamente a MongoDB Atlas`);
     console.log(`   📦 Base de datos: ${DB_NAME}`);
   } catch (error) {
     // Si la conexión falla, mostramos el error detallado
-    console.error("❌ Error al conectar con MongoDB Atlas:", error.message);
+    console.error("�?Error al conectar con MongoDB Atlas:", error.message);
     console.error("   💡 Verifica que:");
     console.error("      - La URI de conexión (MONGODB_URI) sea correcta");
     console.error("      - El usuario y contraseña sean válidos");
@@ -167,6 +167,6 @@ function getDB() {
 }
 
 // --- Exportamos las funciones ---
-// connectDB → se usa en server.js para inicializar la conexión al arrancar
-// getDB     → se usa en los controladores para acceder a las colecciones
+// connectDB �?se usa en server.js para inicializar la conexión al arrancar
+// getDB     �?se usa en los controladores para acceder a las colecciones
 export { connectDB, getDB };
