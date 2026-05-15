@@ -89,7 +89,7 @@ if (!MONGODB_URI) {
 // Esta será la base de datos donde se almacenarán las colecciones:
 //  - peliculas: almacena los documentos de películas
 //  - actores: almacena los documentos de actores (con referencia a películas)
-const DB_NAME = "cine_db";
+const DB_NAME = "cine-db";
 
 // --- Cliente de MongoDB ---
 // MongoClient es la clase principal del driver de MongoDB para Node.js.

@@ -45,6 +45,7 @@ app.use("/api/actores", actorRoutes);
 // Render asigna automáticamente un puerto mediante la variable PORT
 // En local, usamos 3000 como puerto por defecto
 const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor escuchando en puerto ${PORT}`));
 
 // --- 7. Conexión a MongoDB y arranque del servidor ---
 // Primero conectamos a la base de datos, y SOLO si la conexión
