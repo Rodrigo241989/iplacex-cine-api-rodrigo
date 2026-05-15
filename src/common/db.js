@@ -169,4 +169,4 @@ function getDB() {
 // --- Exportamos las funciones ---
 // connectDB ‚Ü?se usa en server.js para inicializar la conexi√≥n al arrancar
 // getDB     ‚Ü?se usa en los controladores para acceder a las colecciones
-export { connectDB, getDB }; esto es lo que tengo en db js
+export { connectDB, getDB };
