@@ -71,19 +71,10 @@ import { MongoClient } from "mongodb";
 //
 // Para producción (Render):
 //   - Configurar la variable en el panel de Render �?Environment Variables
-const uri = process.env.MONGODB_URI || "mongodb+srv://eva3_express:ubXMgx6hCoXdvoFb@cluster-express.egphtbu.mongodb.net/cine_db?appName=cluster-express";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://eva3_express:ubXMgx6hCoXdvoFb@cluster-express.egphtbu.mongodb.net/cine_db?appName=cluster-express";
 
-// Validación: si no se encuentra la variable de entorno, mostramos error claro
-if (!MONGODB_URI) {
-  console.error("�?ERROR: La variable de entorno MONGODB_URI no está definida.");
-  console.error("   💡 Para desarrollo local:");
-  console.error("      - Crea un archivo .env con: MONGODB_URI=tu_cadena_de_conexion");
-  console.error("      - O ejecuta: export MONGODB_URI=\"tu_cadena_de_conexion\"");
-  console.error("   💡 Para Render:");
-  console.error("      - Ve a tu servicio �?Environment �?Environment Variables");
-  console.error("      - Agrega MONGODB_URI con tu cadena de conexión de Atlas");
-  process.exit(1);
-}
+// Si no hay variable de entorno, usamos la URI directamente (fallback para Render)
+console.log("?? Conectando a MongoDB Atlas...");
 
 // --- Nombre de la base de datos ---
 // Esta será la base de datos donde se almacenarán las colecciones:
