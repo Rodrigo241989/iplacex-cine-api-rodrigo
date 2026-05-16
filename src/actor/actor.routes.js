@@ -1,22 +1,7 @@
-// ============================================================
-// actor.routes.js - Rutas de Actores
-// ============================================================
-// Define las rutas (endpoints) para el CRUD de actores.
-// Cada ruta se conecta con una función del controlador.
-//
-// Rutas definidas:
-// POST /                       → Crear un nuevo actor
-// GET  /                       → Listar todos los actores
-// GET  /:id                    → Obtener un actor por su ID
-// GET  /pelicula/:peliculaId   → Filtrar actores por película
-//
-// Nota: Estas rutas se montan con prefijo "/api/actores"
-// en server.js, por lo que la ruta completa sería:
-// POST /api/actores, GET /api/actores, etc.
-// ============================================================
+
 
 import { Router } from "express";
-// Importamos las funciones del controlador de actores
+
 import {
   crearActor,
   listarActores,
@@ -24,7 +9,7 @@ import {
   obtenerActoresPorPelicula,
 } from "./actor.controller.js";
 
-// Creamos un router de Express
+
 const router = Router();
 
 // --- Definición de rutas ---

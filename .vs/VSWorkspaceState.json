@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\actor",
+    "\\src\\common"
   ],
-  "SelectedNode": "\\.env.example",
+  "SelectedNode": "\\src\\common\\db.js",
   "PreviewInSolutionExplorer": false
 }
